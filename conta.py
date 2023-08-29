@@ -19,3 +19,11 @@ class Conta:
             self.saldo -= valor
             self.extrato.append("- saldo")
             return false
+
+    def depositar(self, valor: float):
+        if valor > 0:
+            self.saldo += valor
+            self.extrato.append("+ depositar")
+            return true
+        else:
+            return false
